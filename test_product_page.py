@@ -16,9 +16,12 @@ import pytest
 def test_guest_can_add_product_to_basket(browser, link):
     page = ProductPage(browser, link)
     page.open()
+    page.should_not_be_success_message()
     page.should_be_promo_url()
     page.should_be_a_button_to_add_to_basket()
     page.add_product_to_basket()
     page.solve_quiz_and_get_code()
     page.should_be_message_item_added_to_basket()
     page.should_be_basket_value_message()
+    page.should_be_the_success_message_disappears()
+
