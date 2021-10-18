@@ -4,6 +4,10 @@ from selenium.webdriver.common.by import By
 class LoginPageLocators:
     REGISTRATION_FORM = (By.CSS_SELECTOR, "[id ='register_form']")
     LOGIN_FORM = (By.CSS_SELECTOR, "[id ='login_form']")
+    EMAIL_ADDRESS = (By.CSS_SELECTOR, "[name='registration-email']")
+    PASSWORD = (By.CSS_SELECTOR, "[name='registration-password1']")
+    CONFIRM_PASSWORD = (By.CSS_SELECTOR, "[name='registration-password2']")
+    BUTTON_REGISTER = (By.CSS_SELECTOR, "#register_form > button")
 
 
 class ProductPageLocators:
@@ -18,6 +22,7 @@ class ProductPageLocators:
 class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class BasketPageLocators:

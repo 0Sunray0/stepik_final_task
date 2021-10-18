@@ -3,10 +3,6 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
-    def should_be_promo_url(self):
-        assert "/?promo=" in self.browser.current_url, "Substring '/?promo=' is not present in the " \
-                                                              "current url "
-
     def should_be_a_button_to_add_to_basket(self):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET), "Button 'Add to basket' not found"
 
